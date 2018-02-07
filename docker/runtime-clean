@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker-compose exec php rm -R /var/www/html/runtime/cache /var/www/html/runtime/debug /var/www/html/runtime/logs

@@ -1,0 +1,1 @@
+../../../vendor/bower-asset/yii2-pjax/jquery.pjax.js

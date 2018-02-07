@@ -1,0 +1,39 @@
+version: '2'
+services:
+  php:
+    build: ./php
+    ports:
+      - "4480:80"
+    volumes:
+      - ./apache2/sites-enabled:/etc/apache2/sites-enabled
+      - /root/.composer/cache:/root/.composer/cache
+      - /root/.composer/auth.json:/root/.composer/auth.json
+      - ../www:/var/www/html
+      - ../test:/var/www/test/
+    environment:
+      - COMPOSER_ALLOW_SUPERUSER=1
+    networks:
+      default:
+        aliases:
+          - fc.mj4444.ru
+#    user: 1000:1000
+  mysql:
+    image: mysql:5.5
+    volumes:
+     - ./data/mysql:/var/lib/mysql
+     - ./mysql/scripts:/scripts
+     - ./mysql/dumps:/dumps
+    environment:
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_DATABASE: fc
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+     - "4481:80"
+    links:
+     - mysql:db
+# should only need if you want to customize settings:
+#     - ./php/etc-php/conf.d:/usr/local/etc/php/conf.d
+# mount your site here:
+#     - ./www:/var/www

@@ -1,0 +1,43 @@
+div.user-line > a:focus, div.user-line > a:hover {
+    text-decoration: none;
+}
+.user-line {
+    font-size: 1rem;
+    font-weight: normal;
+    .age {
+        color: #f33;
+    }
+    .town {
+        color: #3a3;
+    }
+    .find-who {
+        color: #777;
+        font-size: 75%;
+    }
+    %status-box {
+        font-size: 75%;
+        border-bottom: 1px solid #999;
+        padding: 0 3px 2px 3px;
+        display: inline-block;
+        line-height: 1;
+    }
+    .virt {
+        @extend %status-box;
+        border-color: #8b3;
+        color: #8b3;
+    }
+    .real {
+        @extend %status-box;
+        border-color: #f88;
+        color: #f88;
+    }
+    .online {
+        @extend %status-box;
+        border-color: #f90;
+        color: #f90;
+    }
+    .zpt {
+        @extend %status-box;
+        color: #333;
+    }
+}

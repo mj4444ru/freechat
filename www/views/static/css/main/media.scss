@@ -1,0 +1,15 @@
+@media (max-width: 575px) {
+    .small-border-x-0 {
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+    }
+    .small-px-2 {
+        padding-right: $small-width-page-padding!important;
+        padding-left: $small-width-page-padding!important;
+    }
+    .small-mx--2 {
+        margin-right: $small-width-page-padding * -1!important;
+        margin-left: $small-width-page-padding * -1!important;
+    }
+}

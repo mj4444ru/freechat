@@ -1,0 +1,14 @@
+ul.rules {
+    list-style-type: none;
+    padding-left: 30px;
+}
+ul.rules li {
+    position: relative;
+}
+ul.rules num {
+    position: absolute;
+    display: block;
+    left: -90px;
+    width: 80px;
+    text-align: right;
+}

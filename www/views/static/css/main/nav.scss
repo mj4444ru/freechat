@@ -1,0 +1,62 @@
+.navbar {
+    padding: 0 1rem 0 1rem;
+    .nav-link {
+        height: 3rem;
+        padding: 0.75rem 0.5rem;
+    }
+    .material-icons {
+        font-size: 1.5rem;
+        vertical-align: -0.4rem;
+    }
+}
+.navbar.nav-grey {
+    background-color: $color-gray50;
+    .nav-link {
+        color: $color-gray10;
+        &:focus, &:hover {
+            color: $color-gray0;
+        }
+        &.disabled {
+            color: $color-gray30;
+        }
+        &.active {
+            color: $color-gray0;
+        }
+    }
+    .nav-brand {
+        color: $color-gray0;
+    }
+}
+.navbar.nav-grey.navbar-user {
+    .nav-link.active {
+        background-color: $color-gray40;
+    }
+    .nav-brand.active {
+        x-background-color: $color-gray50;
+    }
+}
+.nav-grey {
+    .dropdown-item {
+        color: $color-gray80;
+        background-color: $color-gray0;
+        &:focus, &:hover {
+            color: $color-gray90;
+            background-color: $color-gray5;
+        }
+        &.active {
+            color: $color-gray0;
+            background-color: $color-gray40;
+        }
+    }
+}
+.navbar .dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+.dropdown-item {
+    padding: 0.5rem 1.5rem;
+    line-height: 1.5;
+}
+button.nav-link {
+    border: 0;
+}

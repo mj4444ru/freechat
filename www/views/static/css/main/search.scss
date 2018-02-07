@@ -1,0 +1,19 @@
+.search-form {
+    border: 1px solid #eee;
+    border-radius: 0.25rem;
+    background: #fafbfc;
+}
+.search-result > div.user-line {
+    border-bottom: 1px solid #eee;
+    > a {
+        line-height: 3rem;
+        min-height: 3rem;
+        padding-left: 26px;
+        display: block;
+        > div {
+            display: inline-block;
+            line-height: 1.5;
+            vertical-align: middle;
+        }
+    }
+}

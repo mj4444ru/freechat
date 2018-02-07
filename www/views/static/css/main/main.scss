@@ -1,0 +1,125 @@
+body {
+    background: $color-gray5;
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+    .container {
+        background: $color-gray0;
+    }
+}
+.container {
+    padding-right: 0;
+    padding-left: 0;
+    @media (min-width: 768px) {
+        width: 720px;
+        max-width: 100%;
+    }
+}
+
+/* !!!mj4444
+.disable-scroll {
+    overflow: hidden;
+    max-height: 100%;
+}
+*/
+
+button {
+    cursor: pointer;
+}
+h1, .h1 {
+    font-size: $h-base-size * 1.5;
+}
+h2, .h2 {
+    font-size: $h-base-size * 1.4;
+}
+h3, .h3 {
+    font-size: $h-base-size * 1.3;
+}
+h4, .h4 {
+    font-size: $h-base-size * 1.2;
+}
+h5, .h5 {
+    font-size: $h-base-size * 1.1;
+}
+H1, H2, H3, H4 {
+    margin-top: $h-base-size;
+}
+
+/* !!!mj4444
+h3.popover-title {
+    margin-top: 0;
+    font-size: 1rem;
+}
+*/
+.m-05 {
+    margin: 0.125rem!important;
+}
+
+.fancybox-thumbs > ul > li:before {
+    z-index: 1051;
+}
+.fancybox-container {
+    z-index: 1052;
+}
+.fancybox-slide {
+    z-index: 1054;
+}
+.fancybox-slide .fancybox-image-wrap {
+    z-index: 1055;
+}
+.fancybox-caption-wrap, .fancybox-infobar, .fancybox-toolbar {
+    z-index: 1057;
+}
+.fancybox-slide>.fancybox-loading {
+    z-index: 1059;
+}
+.fancybox-is-open .fancybox-bg {
+    opacity: .25;
+}
+.fancybox-slide {
+    > .modal {
+        box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        max-width: 100%;
+        .card-header {
+            border-radius: 0;
+        }
+    }
+}
+
+/* !!!mj4444
+.modal-container {
+  max-width: 500px;
+  padding: 0;
+  margin: 20px 0;
+  box-shadow: 0 0.1em 0.4em rgba(0,0,0,.3);
+}
+.modal-page-overlay {
+    background-color: rgba(0, 0, 0, 0.25);
+    cursor: default;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: none;
+    z-index: 9999999;
+    &::before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    .page {
+        background-color: #fff;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        text-align: left;
+        padding: 2rem 3rem;
+    }
+}
+*/

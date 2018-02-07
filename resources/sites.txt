@@ -1,0 +1,12 @@
+https://materialdesignicons.com/icon/
+https://material.io/icons/
+https://ru.icons8.com/icon/pack/user-interface/color
+https://websemantics.uk/tools/svg-to-background-image-conversion/
+
+https://developers.google.com/maps/documentation/geocoding/intro?hl=ru#Types
+https://developers.google.com/maps/documentation/api-picker?hl=ru
+https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform?hl=ru
+https://developers.google.com/maps/documentation/javascript/places-autocomplete?hl=ru#address_forms
+https://google-developers.appspot.com/maps/documentation/utils/geocoder/?hl=ru#place_id%3DChIJq0LKxs852UMR9VHxe8P5_IE
+
+

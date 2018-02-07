@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cp ../www/config/docker/params-local.php ../www/config/params-local.php
+cp ../www/config/docker/web-local.php ../www/config/web-local.php
+cp ../www/config/docker/db.php ../www/config/db.php
+
+docker-compose up -d --build

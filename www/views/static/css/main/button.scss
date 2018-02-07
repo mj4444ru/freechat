@@ -1,0 +1,68 @@
+.btn.disabled, .btn:disabled {
+    cursor: not-allowed;
+}
+.btn-grey {
+    color: $color-gray0;
+    background-color: $color-gray50;
+    border-color: $color-gray30;
+    &:hover {
+        background-color: $color-gray60;
+        border-color: $color-gray40;
+    }
+    &.disabled, &:disabled {
+        color: $color-gray20;
+        background-color: $color-gray50;
+        border-color: $color-gray30;
+    }
+}
+.btn-grey2 {
+    color: $color-gray100;
+    background-color: $color-gray0;
+    border-color: $color-gray20;
+    &:hover {
+        background-color: $color-gray5;
+        border-color: $color-gray40;
+    }
+    &.disabled, &:disabled {
+        color: $color-gray80;
+        background-color: $color-gray5;
+        border-color: $color-gray20;
+    }
+}
+.btn-teal {
+    color: $color-teal0;
+    background-color: $color-teal50;
+    border-color: $color-teal30;
+    &:hover {
+        background-color: $color-teal60;
+        border-color: $color-teal40;
+    }
+    &.disabled, &:disabled {
+        color: $color-teal20;
+        background-color: $color-teal50;
+        border-color: $color-teal30;
+    }
+}
+.btn-blue {
+    color: $color-blue0;
+    background-color: $color-blue50;
+    border-color: $color-blue30;
+    &:hover {
+        background-color: $color-blue60;
+        border-color: $color-blue40;
+    }
+    &.disabled, &:disabled {
+        color: $color-blue20;
+        background-color: $color-blue50;
+        border-color: $color-blue30;
+    }
+}
+
+.btn-flat-teal {
+    color: $color-teal50;
+    background-color: transparent;
+    border: 0;
+    &:hover {
+        background-color: $color-gray5;
+    }
+}

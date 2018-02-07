@@ -1,0 +1,7 @@
+{
+  "globalDependencies": {
+    "bootstrap": "registry:dt/bootstrap#3.3.5+20160726204056",
+    "fancybox": "registry:dt/fancybox#2.1.0+20160510010627",
+    "jquery": "registry:dt/jquery#1.10.0+20170310222111"
+  }
+}

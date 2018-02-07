@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+running_containers=`docker ps -q`
+if [ -n "$running_containers" ]; then
+    echo "Stopping all running docker containers..."
+    docker stop `docker ps -q`
+fi

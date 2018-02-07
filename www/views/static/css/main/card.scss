@@ -1,0 +1,90 @@
+%card {
+    margin: 10px;
+    .card-header {
+        border-bottom: 0;
+        color: $color-white;
+    }
+    .fancybox-close-small:after {
+        color: $color-white;
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
+
+.card.card-grey {
+    @extend %card;
+    border-color: $color-gray50;
+    .card-header {
+        background-color: $color-gray50;
+    }
+    .fancybox-close-small:hover:after {
+        color: $color-gray50;
+        background: $color-gray5;
+    }
+}
+
+.card.card-teal {
+    @extend %card;
+    border-color: $color-teal50;
+    .card-header {
+        background-color: $color-teal50;
+    }
+    .fancybox-close-small:hover:after {
+        color: $color-teal50;
+        background: $color-teal5;
+    }
+}
+
+.card.card-blue {
+    @extend %card;
+    border-color: $color-blue50;
+    .card-header {
+        background-color: $color-blue50;
+    }
+    .fancybox-close-small:hover:after {
+        color: $color-blue50;
+        background: $color-blue5;
+    }
+}
+
+%flatcard {
+    @extend %card;
+    .card-header {
+        color: $color-black;
+        background-color: $color-white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding-bottom: 0.25rem;
+    }
+    .fancybox-close-small:hover:after {
+        background: $color-gray5;
+    }
+    .card-body {
+        padding-top: 0; 
+    }
+}
+
+.card.flatcard-teal {
+    @extend %flatcard;
+    border-color: $color-teal50;
+    .fancybox-close-small:after, .fancybox-close-small:hover:after {
+        color: $color-teal50;
+    }
+}
+
+.card-btn-line {
+    text-align: right;
+    margin-top: -1rem;
+    margin-bottom: -0.75rem;
+}
+
+.fancybox-slide > .card {
+    padding: 0;
+    > .card-header {
+        padding-right: 2.75rem;
+    }
+}
