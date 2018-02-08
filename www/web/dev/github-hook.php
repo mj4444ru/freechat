@@ -9,11 +9,11 @@ $logstr = `cd {$path}; git reset --hard HEAD >&1; git chackout master >&1; git p
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
 $logstr = `cd {$path}/www; composer install 2>&1` . "\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
-$logstr = `cd {$path}/www; {$path}/www/yii migrate --interactive=0 2>&1` . "\n";
+$logstr = `cd {$path}/www; php {$path}/www/yii migrate --interactive=0 2>&1` . "\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
-$logstr = `cd {$path}/www; {$path}/www/yii cache/flush 2>&1` . "\n";
+$logstr = `cd {$path}/www; php {$path}/www/yii cache/flush 2>&1` . "\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
-$logstr = `cd {$path}/www; {$path}/www/yii cache/flush-all 2>&1` . "\n";
+$logstr = `cd {$path}/www; php {$path}/www/yii cache/flush-all 2>&1` . "\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
 $logstr = "\nEnd auto-deploy at " . date("r") . "\n\n================================================================================\n\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
