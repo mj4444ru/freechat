@@ -5,15 +5,15 @@ $logstr .= "Commit info: " . (isset($_POST['payload']) ? $_POST['payload'] : '(n
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
 
 $path = realpath(__DIR__ . '/../../../');
-$logstr = `cd {$path}; git pull` . "\n";
+$logstr = `cd {$path}; git pull 2>&1` . "\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
-$logstr = `cd {$path}/www; composer install` . "\n";
+$logstr = `cd {$path}/www; composer install 2>&1` . "\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
-$logstr = `cd {$path}/www; {$path}/www/yii migrate --interactive=0` . "\n";
+$logstr = `cd {$path}/www; {$path}/www/yii migrate --interactive=0 2>&1` . "\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
-$logstr = `cd {$path}/www; {$path}/www/yii cache/flush` . "\n";
+$logstr = `cd {$path}/www; {$path}/www/yii cache/flush 2>&1` . "\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
-$logstr = `cd {$path}/www; {$path}/www/yii cache/flush-all` . "\n";
+$logstr = `cd {$path}/www; {$path}/www/yii cache/flush-all 2>&1` . "\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
 $logstr = "\nEnd auto-deploy at " . date("r") . "\n\n================================================================================\n\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
