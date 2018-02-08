@@ -5,7 +5,7 @@ $logstr .= "Commit info: " . (isset($_POST['payload']) ? $_POST['payload'] : '(n
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
 
 $path = realpath(__DIR__ . '/../../../');
-$logstr = `cd {$path}; git pull 2>&1` . "\n";
+$logstr = `cd {$path}; git reset --hard HEAD >&1; git chackout master >&1; git pull 2>&1` . "\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
 $logstr = `cd {$path}/www; composer install 2>&1` . "\n";
 file_put_contents($logfile, $logstr, FILE_APPEND | LOCK_EX);
