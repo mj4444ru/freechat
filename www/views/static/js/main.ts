@@ -123,9 +123,9 @@ namespace FCPjax {
         $(window).on('popstate.fb', function (event: any) {
             if (fbCount && (!event.state || !event.state.fbindex || (event.state.fbindex < fbCount))) {
                 $.fancybox.close();
-                if (event.state && event.state.title) {
-                    document.title = event.state.title;
-                }
+            }
+            if (event.state && event.state.title) {
+                document.title = event.state.title;
             }
         });
     }

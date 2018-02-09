@@ -109,9 +109,9 @@ var FCPjax;
         $(window).on('popstate.fb', function (event) {
             if (fbCount_1 && (!event.state || !event.state.fbindex || (event.state.fbindex < fbCount_1))) {
                 $.fancybox.close();
-                if (event.state && event.state.title) {
-                    document.title = event.state.title;
-                }
+            }
+            if (event.state && event.state.title) {
+                document.title = event.state.title;
             }
         });
     }
