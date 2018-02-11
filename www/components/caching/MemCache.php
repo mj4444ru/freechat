@@ -1,6 +1,6 @@
 <?php
 
-namespace app\components;
+namespace app\components\caching;
 
 class MemCache extends \yii\caching\MemCache
 {

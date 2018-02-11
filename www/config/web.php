@@ -19,7 +19,7 @@ $config = [
             'class' => yii\caching\FileCache::class,
             'keyPrefix' => 'fc/',
         ],
-        'mcache' => app\components\MemoryCache::class,
+        'cache2' => app\components\caching\LifeCache::class,
         'user' => [
             'identityClass' => app\models\User::class,
             'enableAutoLogin' => true,
@@ -40,7 +40,7 @@ $config = [
             ],
         ],
         'view' => [
-            'class' => app\components\View::class,
+            'class' => app\components\web\View::class,
 //            'theme' => [
 //                'basePath' => '@app/view/ru',
 //                'baseUrl' => '@web',

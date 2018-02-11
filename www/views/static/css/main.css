@@ -191,7 +191,7 @@ button.nav-link {
   background-color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
 }
 .card.flatcard-teal .fancybox-close-small:hover:after {
   background: #eceff1;

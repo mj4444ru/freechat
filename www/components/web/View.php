@@ -1,6 +1,6 @@
 <?php
 
-namespace app\components;
+namespace app\components\web;
 
 use Yii;
 use yii\helpers\Html;
@@ -8,7 +8,6 @@ use yii\helpers\Html;
 class View extends \yii\web\View
 {
     private $_isPjax;
-
 
     protected function renderHeadHtml()
     {

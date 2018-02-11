@@ -37,7 +37,7 @@ class ProfileController extends \yii\web\Controller
         if (!User::current())
         $request = Yii::$app->getRequest();
         if ($error || !$request->getIsAjax() || !$request->getIsPost()) {
-            throw new NotFoundHttpException(Yii::t('yii', 'Page not found.'));
+!!!            throw new NotFoundHttpException(Yii::t('yii', 'Page not found.'));
         }
     }
 }

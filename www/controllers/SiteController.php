@@ -3,12 +3,12 @@
 namespace app\controllers;
 
 use Yii;
-use yii\web\NotFoundHttpException;
 use yii\filters\PageCache;
 use app\models\User;
 use app\models\Profile;
 use app\helpers\Security;
-use app\components\ErrorAction;
+use app\components\web\ErrorAction;
+use app\components\web\NotFoundHttpException;
 
 class SiteController extends \yii\web\Controller
 {
@@ -85,7 +85,7 @@ class SiteController extends \yii\web\Controller
     {
         $model = is_numeric($id) ? Profile::findById($id) : null;
         if (!$model) {
-            throw new NotFoundHttpException(Yii::t('yii', 'Page not found.'));
+            throw new NotFoundHttpException();
         }
         return $this->renderGet('anketa', ['model' => $model]);
     }
@@ -96,7 +96,7 @@ class SiteController extends \yii\web\Controller
         $this->ajaxOnly();
         $post = Yii::$app->request->post();
         if (!isset($post['from'], $post['to'], $post['text'], $post['lastMsgId'])) {
-            throw new NotFoundHttpException(Yii::t('yii', 'Page not found.'));
+            throw new NotFoundHttpException();
         }
         $user = User::current();
         if (!$user || $post['from'] != $user->id || !$post['text']) {
@@ -130,6 +130,25 @@ class SiteController extends \yii\web\Controller
         $user = User::current();
         $request = Yii::$app->request;
         if (!$this->isGet) {
+            if (!Yii::$app->request->isAjax) {
+                throw new NotFoundHttpException();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
             if ($user) {
                 if ($modal) {
                     return $this->asJson([
@@ -212,7 +231,7 @@ class SiteController extends \yii\web\Controller
     {
         $request = Yii::$app->getRequest();
         if ($error || !$request->getIsAjax() || !$request->getIsPost()) {
-            throw new NotFoundHttpException(Yii::t('yii', 'Page not found.'));
+            throw new NotFoundHttpException();
         }
     }
 }

@@ -8,7 +8,7 @@ use app\models\Online;
 $user = User::current();
 $this->title = 'Знакомства для свободного общения, бесплатно без смс';
 ?>
-<h4 class="text-primary mt-2">Добро пожаловать на сайт знакомств для свободного общения.</h4>
+<h4 class="text-primary mt-2">Добро пожаловать на сайт знакомств и свободного общения.</h4>
 <?php
 if (!$user) {
     echo $this->render('index/guest-register');

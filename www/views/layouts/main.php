@@ -10,6 +10,7 @@ use app\helpers\Security;
 
 $request = Yii::$app->getRequest();
 if (!$request->getIsGet()) {
+    Yii::error('Render layout "main" for not GET request.');
     echo Security::getNoGetPageContent();
     return;
 }

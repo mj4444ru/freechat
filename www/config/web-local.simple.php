@@ -12,8 +12,13 @@ $config = [
 //            'class' => yii\caching\MemCache::class,
 //            'useMemcached' => true,
 //        ],
+//        'cache' => [
+//            'class' => yii\caching\ApcCache::class,
+//            'useApcu' => true,
+//        ],
         'assetManager' => [
             'appendTimestamp' => true,
+            // comment out the following 9 lines when deployed to production
             'converter' => [
                 'class' => yii\web\AssetConverter::class,
                 'forceConvert' => YII_ENV_DEV,

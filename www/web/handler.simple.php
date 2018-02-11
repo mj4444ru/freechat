@@ -2,8 +2,8 @@
 
 die('You are not allowed to access this file.');
 // comment out the following two lines when deployed to production
-defined('YII_DEBUG') or define('YII_DEBUG', true);
-defined('YII_ENV') or define('YII_ENV', 'dev');
+//defined('YII_DEBUG') or define('YII_DEBUG', true);
+//defined('YII_ENV') or define('YII_ENV', 'dev');
 defined('YII_ENV') or define('YII_ENV', 'prod');
 
 require(__DIR__ . '/../vendor/autoload.php');
